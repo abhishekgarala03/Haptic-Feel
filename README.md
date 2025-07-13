@@ -1,7 +1,7 @@
 # Haptic-Feel (Vibe for F1 Haptic Trailer) -> Soon for Android 11+
 This project generates haptic feedback patterns for Android devices by analyzing audio and visual features for movie trailers. The pipeline extracts features from video files, trains a machine learning model, and outputs haptic events in a JSON format compatible with Android's vibration API.
 
-# Features (Python ML)
+## Features (Python ML)
 
 🎬 Video processing with OpenCV
 
