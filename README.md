@@ -13,7 +13,7 @@ This project generates haptic feedback patterns for Android devices by analyzing
 
 📱 JSON output compatible with Android's Vibrator API
 
-# Usage (Python ML)
+## Usage (Python ML)
 
 ```
 from haptic_generator import main_pipeline
@@ -29,7 +29,8 @@ if success:
     print("Haptic pattern generated successfully!")
 ```
 
-# Pipeline Steps
+## Pipeline Steps
+
 1) Audio Extraction: Convert video to WAV audio
 
 2) Audio Sampling: MFCC, chroma, spectral centroid, RMS energy
@@ -44,7 +45,7 @@ if success:
 
 6) JSON Export: Android-compatible output format
 
-# Sample Output Structure
+## Sample Output Structure
 
 ```
 {
@@ -75,7 +76,8 @@ if success:
 }
 ```
 
-# Customization
+## Customization
+
 Modify these aspects in the code:
 
 ```
@@ -92,7 +94,7 @@ intensity = int(min(255, max(50, prob[pred] * 300)))  # Increase sensitivity
 features['new_feature'] = []  # Implement your feature
 ```
 
-# Features (Android)
+## Features (Android)
 
 🎥 Video playback with ExoPlayer
 
@@ -104,21 +106,24 @@ features['new_feature'] = []  # Implement your feature
 
 🔄 Seek synchronization between video and haptics
 
-# Key Components 
+## Key Components 
+
 HapticActivity.kt: Main player activity
 
 HapticManager.kt: Haptic feedback controller
 
 HapticPattern.json: Generated pattern file (from ML pipeline)
 
-# Setup Instructions
+## Instructions
+
 Add generated haptic_pattern.json to app/src/main/assets
 
 Add video file to app/src/main/res/raw
 
 Update video URI in loadVideo():
 
-# Synchronization Logic
+## Synchronization Logic
+
 The player maintains perfect sync between video and haptics by:
 
 Tracking video position with exoPlayer.currentPosition
